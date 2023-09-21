@@ -22,7 +22,7 @@ p,img,a,button,h2,h3{
     padding-left: 3vw;
 }
 /* Left Panel */
-#container_left{
+.container_left{
     background-image: url('images/background.jpg');
     background-size: cover;
     height: 100vh;
@@ -46,7 +46,7 @@ p,img,a,button,h2,h3{
     background-color: rgba(255, 255, 255, 0.452);
 }
 /* Right Panel */
-#container_right{
+.container_right{
     display: flex;
     justify-content: center;
     background-color: rgb(248, 248, 248);
@@ -104,6 +104,7 @@ input{
     border-radius: 6px;
     padding: 6px;
     border: 1px solid rgb(224, 224, 224);
+    font-family: Mooli;
 }
 input:focus{
     border: 1px solid rgb(150, 150, 150);
@@ -174,4 +175,96 @@ button:hover{
     text-decoration: none;
     font-weight: bold;
     font-size: 16px;
+}
+
+@media only screen and (max-width: 900px){
+    body{
+        flex-direction: column;
+    }
+    .container_left{
+        background-size: cover;
+        height: 25vh;
+        width: 100%;
+    }
+    .logo{
+        font-size: 9vh;
+        margin-top: 7vh;
+    }
+    .container_right{
+        height: 75vh;
+        width: 100%;
+        align-items: center;
+    }
+    .container_text{
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+    .form_contain{
+        justify-content: space-between;
+        padding: 0 10vw 30px 10vw;
+        margin-top: 20px;
+    }
+    .form_title{
+        text-align: center;
+    }
+    input{
+        width: 80%;
+    }
+    .input{
+        align-items: center;
+        width: 45%;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+    }
+    button{
+        margin-bottom: 0;
+        margin: 25px 10vw 5px 10vw;
+    }
+    .login{
+        margin-bottom: auto;
+        padding: 0;
+    }
+    .error{
+        min-width: auto;
+        max-width: none;
+        width: auto;
+        left: 0;
+    }
+}
+
+@media only screen and (max-width: 410px){
+    .container_left{
+        height: 250px;
+    }
+    .logo{
+        min-width: 300px;
+    }
+    .container_text{
+        padding: 20px 0 0 0;
+    }
+    .container_right{
+        justify-content: unset;
+        height: 100%;
+    }
+    .form_contain{
+        flex-direction: column;
+        padding: 20px 0;
+    }
+    .input{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+    }
+    .form_title{
+        padding-bottom: 0;
+    }
+    form{
+        width: 100%;
+    }
 }

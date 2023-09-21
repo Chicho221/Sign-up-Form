@@ -20,45 +20,45 @@
                     <h3>Sign up and plan your trip right now!</h3>
                 </div>
             </div>
-            <form action="">
+            <form action="" method="">
                 <div class="form_contain">
                     <p class="form_title">Let's do this!</p>
                     <div class="input">
-                        <label for="first_name" aria-label="required">First Name</label>
-                        <input type="text" name="first_name" id="first_name" pattern="[a-zA-Z]+" required>
-                        <span class="error">error</span>
+                        <label for="first_name" aria-label="required">First Name*</label>
+                        <input type="text" name="first_name" id="first_name" maxlength="20" placeholder="Jake">
+                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <label for="last_name" aria-label="required">Last Name</label>
-                        <input type="text" name="last_name" id="last_name" pattern="[a-zA-Z]+" required>
-                        <span class="error">error</span>
+                        <label for="last_name" aria-label="required">Last Name*</label>
+                        <input type="text" name="last_name" id="last_name" maxlength="20" placeholder="Smith" >
+                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <label for="email" aria-label="required">Email</label>
-                        <input type="email" name="mail" id="email" required>
-                        <span class="error">error</span>
+                        <label for="email" aria-label="required">Email*</label>
+                        <input type="text" name="mail" id="email" placeholder="example@mail.com">
+                        <span class="error"></span>
                     </div>
                     <div class="input">
-                        <label for="number" aria-label="optional">Phone Number</label>
-                        <input type="tel" name="number" id="number" pattern="[0-9]+">
-                        <span class="error">error</span>
+                        <label for="number" aria-label="required">Phone Number*</label>
+                        <input type="tel" name="number" id="number" maxlength="9" placeholder="e.g. 857484647">
+                        <span class="error"></span>
                     </div>
                     <div class="input" aria-label="required">
-                        <label for="pwd">Password</label>
-                        <input type="password" name="pwd" id="pwd" minlength="8" maxlength="20" required>
-                        <span class="error">error</span>
+                        <label for="pwd">Password* </label>
+                        <input type="password" name="pwd" id="pwd" maxlength="20" placeholder="Must contain 8-20 characters">
+                        <span class="error"></span>
                     </div>
                     <div class="input" aria-label="required">
-                        <label for="pwd_check">Confirm Password</label>
-                        <input type="password" name="pwd_check" id="pwd_check" minlength="8" maxlength="20" required>
-                        <span class="error">error</span>
+                        <label for="pwd_check">Confirm Password*</label>
+                        <input type="password" name="pwd_check" id="pwd_check" maxlength="20" placeholder="Same as password entered">
+                        <span class="error"></span>
                     </div>
                 </div>
                 <button>Create Account</button>
             </form>
-            <p class="login left">Already have an account? <a href="#">Log in</a></p>
+            <p class="login left">Already have an account? <a href="index.html">Log in</a></p>
 
         </div>
-
+        <script src="script.js"></script>
     </body>
 </html>

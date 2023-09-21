@@ -17,8 +17,12 @@ p,img,a,button,h2,h3{
     padding: 0;
     margin: 0;
 }
+
+.left{
+    padding-left: 3vw;
+}
 /* Left Panel */
-#container-left{
+#container_left{
     background-image: url('images/background.jpg');
     background-size: cover;
     height: 100vh;
@@ -42,7 +46,7 @@ p,img,a,button,h2,h3{
     background-color: rgba(255, 255, 255, 0.452);
 }
 /* Right Panel */
-#container-right{
+#container_right{
     display: flex;
     justify-content: center;
     background-color: rgb(248, 248, 248);
@@ -85,6 +89,8 @@ p,img,a,button,h2,h3{
     gap: 20px;
     box-shadow: 2px 5px 3px rgb(207, 207, 207);
 }
+
+/* Input */
 .input{
     display: flex;
     flex-flow: column wrap;
@@ -99,16 +105,31 @@ input{
     padding: 6px;
     border: 1px solid rgb(224, 224, 224);
 }
-input:focus{
-    border: 1px solid rgb(158, 22, 22);
-    box-shadow: 2px 2px 5px rgb(99, 99, 99);
+input:focus:invalid{
+    border: 1px solid rgb(150, 150, 150);
+    box-shadow: 2px 2px 5px rgb(185, 185, 185);
     outline: 0;
 }
 
-.left{
-    padding-left: 3vw;
+
+input[type="text"]:invalid,
+     [type="email"]:invalid,
+     [type="tel"]:invalid,
+     [type="password"]:invalid{
+    border: 1px solid var(--colorRed);
+    background-color: rgb(248, 213, 203);
 }
 
+.error{
+    font-size: 11px;
+    color: var(--colorRed);
+    min-width: 130px;
+    max-width: 300px;
+    position: relative;
+    left: 2%;
+    width: 20vw;
+}
+/* Button */
 button{
     margin: 25px 3vw;
     background-color: var(--colorRed);
@@ -128,6 +149,7 @@ button:hover{
     cursor: pointer;
 }
 
+/* Bottom Container */
 .login{
     font-family: Mooli;
     font-size: 16px;

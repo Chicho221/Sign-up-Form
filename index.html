@@ -10,10 +10,10 @@
         <title>Sign-up</title>
     </head>
     <body>
-        <div id="container-left">
+        <div id="container_left">
             <div class="logo"><p>Torisa</p></div>
         </div>
-        <div id="container-right">
+        <div id="container_right">
             <div class="container_text left">
                 <div class="content">
                     <h2>Thinking about a trip to Japan? You found a right place. We will help you plan a trip of your dreams.</h2>
@@ -24,28 +24,34 @@
                 <div class="form_contain">
                     <p class="form_title">Let's do this!</p>
                     <div class="input">
-                        <label for="">First Name</label>
-                        <input type="text">
+                        <label for="first_name" aria-label="required">First Name</label>
+                        <input type="text" name="first_name" id="first_name" pattern="[a-zA-Z]+" required>
+                        <span class="error">error</span>
                     </div>
                     <div class="input">
-                        <label for="">Last Name</label>
-                        <input type="text">
+                        <label for="last_name" aria-label="required">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" pattern="[a-zA-Z]+" required>
+                        <span class="error">error</span>
                     </div>
                     <div class="input">
-                        <label for="">Email</label>
-                        <input type="text">
+                        <label for="email" aria-label="required">Email</label>
+                        <input type="email" name="mail" id="email" required>
+                        <span class="error">error</span>
                     </div>
                     <div class="input">
-                        <label for="">Phone Number</label>
-                        <input type="text">
+                        <label for="number" aria-label="optional">Phone Number</label>
+                        <input type="tel" name="number" id="number" pattern="[0-9]+">
+                        <span class="error">error</span>
                     </div>
-                    <div class="input">
-                        <label for="">Password</label>
-                        <input type="text">
+                    <div class="input" aria-label="required">
+                        <label for="pwd">Password</label>
+                        <input type="password" name="pwd" id="pwd" minlength="8" maxlength="20" required>
+                        <span class="error">error</span>
                     </div>
-                    <div class="input">
-                        <label for="">Confirm Password</label>
-                        <input type="text">
+                    <div class="input" aria-label="required">
+                        <label for="pwd_check">Confirm Password</label>
+                        <input type="password" name="pwd_check" id="pwd_check" minlength="8" maxlength="20" required>
+                        <span class="error">error</span>
                     </div>
                 </div>
                 <button>Create Account</button>
